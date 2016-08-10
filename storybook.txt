@@ -1,0 +1,7 @@
+"storybook"
+{
+  "base"  "base"
+  "title" "Story Book"
+  "maps"  "^stb_"
+  "menusystem"  "1"
+}
