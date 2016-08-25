@@ -11,11 +11,11 @@ function GM:PlayerInitialSpawn(ply)
   if(GAMEMODE.canSprint == true) then
     ply:SetRunSpeed(GAMEMODE.runSpeed)
   else
-    ply:SetRunSpeed(0)
+    ply:SetRunSpeed(GAMEMODE.walkSpeed)
   end
   ply:SetCanZoom(GAMEMODE.canZoom)
   ply:SetModel(GAMEMODE.playermodel)
-  ply:AllowFlashlight(GAMEMODE.flashlightALlowed)
+  ply:AllowFlashlight(GAMEMODE.flashlightAllowed)
   ply:SetJumpPower(GAMEMODE.jumpPower)
   ply:SetWalkSpeed(GAMEMODE.walkSpeed)
 end
@@ -31,11 +31,11 @@ function GM:PlayerSpawn(ply)
   if(GAMEMODE.canSprint == true) then
     ply:SetRunSpeed(GAMEMODE.runSpeed)
   else
-    ply:SetRunSpeed(0)
+    ply:SetRunSpeed(GAMEMODE.walkSpeed)
   end
   ply:SetCanZoom(GAMEMODE.canZoom)
   ply:SetModel(GAMEMODE.playermodel)
-  ply:AllowFlashlight(GAMEMODE.flashlightALlowed)
+  ply:AllowFlashlight(GAMEMODE.flashlightAllowed)
   ply:SetJumpPower(GAMEMODE.jumpPower)
   ply:SetWalkSpeed(GAMEMODE.walkSpeed)
 end

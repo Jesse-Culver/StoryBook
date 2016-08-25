@@ -35,20 +35,20 @@ function ENT:KeyValue(key, value)
     else
       GAMEMODE.solidPlayer = true
     end
-  elseif key == "canWalk" and value != true then
-    if value == 0 then
+  elseif key == "canWalk" then
+    if tonumber(value) == 0 then
       GAMEMODE.canWalk = false
     else
       GAMEMODE.canWalk = true
     end
-  elseif key == "canSprint" and value != true then
-    if value == 0 then
+  elseif key == "canSprint" then
+    if tonumber(value) == 0 then
       GAMEMODE.canSprint = false
     else
       GAMEMODE.canSprint = true
     end
-  elseif key == "canZoom" and value != true then
-    if value == 0 then
+  elseif key == "canZoom" then
+    if tonumber(value) == 0 then
       GAMEMODE.canZoom = false
     else
       GAMEMODE.canZoom = true
@@ -60,19 +60,19 @@ function ENT:KeyValue(key, value)
     else
       print("INVALID PLAYER MODEL SET")
     end
-  elseif key == "jumpPower" and value != 160 then
+  elseif key == "jumpPower" then
     GAMEMODE.jumpPower = value
 --  elseif key == "npcTarget" and value != true then
 --    GAMEMODE.npcTarget = value
-  elseif key == "runSpeed" and value != 600 then
+  elseif key == "runSpeed" then
     GAMEMODE.runSpeed = value
-  elseif key == "walkSpeed" and value != 400 then
+  elseif key == "walkSpeed"  then
     GAMEMODE.walkSpeed = value
-  elseif key == "flashlightALlowed" and value != true then
-    if value == 0 then
-      GAMEMODE.flashlightALlowed = false
+  elseif key == "flashlightAllowed" then
+    if tonumber(value) == 0 then
+      GAMEMODE.flashlightAllowed = false
     else
-      GAMEMODE.flashlightALlowed = true
+      GAMEMODE.flashlightAllowed = true
     end
   end
 end

@@ -14,7 +14,7 @@ function GM:Initialize()
   GAMEMODE.canZoom = true
   GAMEMODE.playermodel = "models/player/Group03/Male_05.mdl"
   GAMEMODE.jumpPower = 160
-  GAMEMODE.runSpeed = 600
-  GAMEMODE.walkSpeed = 400
-  GAMEMODE.flashlightALlowed = true
+  GAMEMODE.runSpeed = 400
+  GAMEMODE.walkSpeed = 200
+  GAMEMODE.flashlightAllowed = true
 end
