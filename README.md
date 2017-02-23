@@ -4,5 +4,5 @@ sandbox tools.
 
 This gamemode does *not* add new content
 
-.FGD file included that you should add to your Hammer configuration so that you
+A .FGD file is included that you should add to your Hammer configuration so that you
 can modify values
