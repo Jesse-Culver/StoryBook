@@ -8,9 +8,7 @@ function GM:PlayerInitialSpawn(ply)
   ply:SetAvoidPlayers(GAMEMODE.solidPlayer)
   ply:SetCanWalk(GAMEMODE.canWalk)
   ply:SetRunSpeed(GAMEMODE.runSpeed)
-  if(GAMEMODE.canSprint == true) then
-    ply:SetRunSpeed(GAMEMODE.runSpeed)
-  else
+  if(GAMEMODE.canSprint == false) then
     ply:SetRunSpeed(GAMEMODE.walkSpeed)
   end
   ply:SetCanZoom(GAMEMODE.canZoom)
@@ -28,9 +26,7 @@ function GM:PlayerSpawn(ply)
   ply:SetAvoidPlayers(GAMEMODE.solidPlayer)
   ply:SetCanWalk(GAMEMODE.canWalk)
   ply:SetRunSpeed(GAMEMODE.runSpeed)
-  if(GAMEMODE.canSprint == true) then
-    ply:SetRunSpeed(GAMEMODE.runSpeed)
-  else
+  if(GAMEMODE.canSprint == false) then
     ply:SetRunSpeed(GAMEMODE.walkSpeed)
   end
   ply:SetCanZoom(GAMEMODE.canZoom)
