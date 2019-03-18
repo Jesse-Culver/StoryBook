@@ -1,9 +1,9 @@
 GM.Name = "Story Book"
 GM.Author = "Wazanator"
 GM.Email = "wazanator01@gmail.com"
-GM.Website = "https://gitlab.com/jesseculver/StoryBook"
+GM.Website = "https://github.com/Jesse-Culver/StoryBook"
 
-//Disable NoClip
+--Disable NoClip
 hook.Add("PlayerNoClip", "DisableNoClip", function()
     return false
 end)
