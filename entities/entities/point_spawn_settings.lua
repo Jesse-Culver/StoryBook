@@ -1,30 +1,30 @@
-//This entity is used by mappers to set some settings
+--This entity is used by mappers to set some settings
 
 ENT.Type = "point"
 ENT.Base = "base_point"
 
 function ENT:KeyValue(key, value)
-  if key == "startingArmor" and value != 0 then
+  if key == "startingArmor" and value ~= 0 then
     if tonumber(value) < 0 then
       value = 0
     end
     GAMEMODE.startingArmor = value
-  elseif key == "respawnArmor" and value != 0 then
+  elseif key == "respawnArmor" and value ~= 0 then
     if tonumber(value) < 0 then
       value = 0
     end
     GAMEMODE.respawnArmor = value
-  elseif key == "startingHealth" and value != 100 then
+  elseif key == "startingHealth" and value ~= 100 then
     if tonumber(value) <= 0 then
       value = 1
     end
     GAMEMODE.startingHealth = value
-  elseif key == "respawnHealth" and value != 100 then
+  elseif key == "respawnHealth" and value ~= 100 then
     if tonumber(value) <= 0 then
       value = 1
     end
     GAMEMODE.respawnHealth = value
-  elseif key == "maxHealth" and value != 100 then
+  elseif key == "maxHealth" and value ~= 100 then
     if tonumber(value) <= 0 then
       value = 1
     end
@@ -53,7 +53,7 @@ function ENT:KeyValue(key, value)
     else
       GAMEMODE.canZoom = true
     end
-  elseif key == "plyModel" and value != "" then
+  elseif key == "plyModel" and value ~= "" then
     if util.IsValidModel(value) then
       util.PrecacheModel(value)
       GAMEMODE.playermodel = value
@@ -62,8 +62,6 @@ function ENT:KeyValue(key, value)
     end
   elseif key == "jumpPower" then
     GAMEMODE.jumpPower = value
---  elseif key == "npcTarget" and value != true then
---    GAMEMODE.npcTarget = value
   elseif key == "runSpeed" then
     GAMEMODE.runSpeed = value
   elseif key == "walkSpeed"  then

@@ -1,6 +1,6 @@
 @include "base.fgd"
 
-@PointClass base(Targetname, Origin) = point_settings :
+@PointClass base(Targetname, Origin) = point_spawn_settings :
 "Point entity containing settings for the map"
 [
   startingArmor(integer) : "Starting Armor": 0 : "Amount of armor a player first spawns in with"
