@@ -38,3 +38,9 @@
     1: "True"
   ]
 ]
+
+@PointClass base(Targetname) = point_hudmessage :
+"Prints message in player chat"
+[
+  input PrintMessage(string) : "Prints the message in chat"
+]

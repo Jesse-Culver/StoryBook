@@ -1,0 +1,17 @@
+{
+	"title"		:	"Story Book Gamemode",
+	"type"		:	"gamemode",
+	"tags"		:	[ "fun" ],
+	"ignore"	:
+	[
+		"*.psd",
+    "*.git/*",
+    "*.pdn",
+    "LICENSE",
+		"README.md",
+		"*.log",
+		"source/*",
+		"*.fgd",
+		"*.svn*"
+	]
+}

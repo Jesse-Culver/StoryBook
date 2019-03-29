@@ -1,4 +1,4 @@
---This entity is used by mappers to set some settings
+--This entity is used by mappers to set some spawn settings
 
 ENT.Type = "point"
 ENT.Base = "base_point"
