@@ -1,4 +1,4 @@
--- Prints
+-- Prints a message to player chat
 
 ENT.Type = "point"
 ENT.Base = "base_point"

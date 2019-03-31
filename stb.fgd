@@ -1,6 +1,6 @@
 @include "base.fgd"
 
-@PointClass base(Targetname, Origin) = point_spawn_settings :
+@PointClass base(Targetname, Origin) = stb_spawn_settings :
 "Point entity containing settings for the map"
 [
   startingArmor(integer) : "Starting Armor": 0 : "Amount of armor a player first spawns in with"
@@ -39,8 +39,15 @@
   ]
 ]
 
-@PointClass base(Targetname) = point_hudmessage :
+@PointClass base(Targetname) = stb_hudmessage :
 "Prints message in player chat"
 [
   input PrintMessage(string) : "Prints the message in chat"
+]
+
+@PointClass base(Targetname) = stb_set_color :
+"Changes the activators color"
+[
+  input SetPlayerColor(color255) : "Sets the activators render color (R G B)."
+  input SetAllPlayerColor(color255) : "Sets the render color (R G B) of ALL players."
 ]
