@@ -1,6 +1,6 @@
 @include "base.fgd"
 
-@PointClass base(Targetname, Origin) = stb_spawn_settings :
+@PointClass base(Targetname, EnableDisable) = stb_spawn_settings :
 "Point entity containing settings for the map"
 [
   startingArmor(integer) : "Starting Armor": 0 : "Amount of armor a player first spawns in with"
@@ -37,6 +37,8 @@
     0: "False"
     1: "True"
   ]
+  // Inputs
+  input Apply(void) : "Applies settings"
 ]
 
 @PointClass base(Targetname) = stb_hudmessage :
