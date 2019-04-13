@@ -53,3 +53,23 @@
   input SetPlayerColor(color255) : "Sets the activators render color (R G B)."
   input SetAllPlayerColor(color255) : "Sets the render color (R G B) of ALL players."
 ]
+
+@PointClass base(Targetname) = stb_entity_glow :
+"Makes entities glow"
+[
+  Entity1(target_destination) : "Entity1" : "" : "Entity to make glow"
+  Entity2(target_destination) : "Entity2" : "" : "Entity to make glow"
+  Entity3(target_destination) : "Entity3" : "" : "Entity to make glow"
+  Entity4(target_destination) : "Entity4" : "" : "Entity to make glow"
+  glowcolor(Color1) : "Glow Color (R G B)" : "255, 255, 255" : "Color to glow"
+  BlurX(integer) : "BlurX" : 2 : "The strength of the halo's blur on the x axis."
+  BlurY(integer) : "BlurY" : 2 : "The strength of the halo's blur on the y axis."
+  IgnoreZ(choices): "Render through everything?" : 0 : "Render through walls, other props, etc" =
+  [
+    0: "No"
+    1: "Yes"
+  ]
+  // Inputs
+  input TurnOn(void) : "Turns the glowing on"
+  input TurnOff(void) : "Turns the glowing off"
+]
