@@ -73,3 +73,10 @@
   input TurnOn(void) : "Turns the glowing on"
   input TurnOff(void) : "Turns the glowing off"
 ]
+
+@PointClass base(Targetname) = stb_breakable_door :
+"Makes entities glow"
+[
+  Door(target_destination) : "Door" : "" : "The Door to monitor"
+  Health(integer) : "Health" : 100 : "Max health of the door"
+]
