@@ -34,4 +34,5 @@ function GM:PlayerSpawn(ply)
   ply:AllowFlashlight(GAMEMODE.flashlightAllowed)
   ply:SetJumpPower(GAMEMODE.jumpPower)
   ply:SetWalkSpeed(GAMEMODE.walkSpeed)
+  ply:SetupHands()
 end
