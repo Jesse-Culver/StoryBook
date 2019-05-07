@@ -11,3 +11,5 @@ Things this mod does:
 
 * Allow you to set player values like model, armor, health, speed, ability to run, etc when a player spawns
 * Print messages to chat
+* Change player model color
+* Make props glow (costly!)
