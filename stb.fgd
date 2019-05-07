@@ -28,7 +28,7 @@
     0: "False"
     1: "True"
   ]
-  plyModel(string) : "Player Model" : "" : "Player model to use"
+  plyModel(studio) : "Player Model" : "" : "Player model to use"
   jumpPower(integer) : "Jump Power": 160 : "Player jump height"
   runSpeed(integer) : "Sprint speed": 400 : "Players sprint speed"
   walkSpeed(integer) : "Walk speed": 200 : "Players walk speed"
