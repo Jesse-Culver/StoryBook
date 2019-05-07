@@ -1,4 +1,4 @@
--- Prints a message to player chat
+-- Changes player model color
 
 ENT.Type = "point"
 ENT.Base = "base_point"

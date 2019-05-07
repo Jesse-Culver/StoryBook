@@ -47,7 +47,7 @@
   input PrintMessage(string) : "Prints the message in chat"
 ]
 
-@PointClass base(Targetname) = stb_set_color :
+@PointClass base(Targetname) = stb_player_color :
 "Changes the activators color"
 [
   input SetPlayerColor(color255) : "Sets the activators render color (R G B)."
