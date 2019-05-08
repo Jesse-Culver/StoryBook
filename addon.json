@@ -12,6 +12,9 @@
 		"*.log",
 		"source/*",
 		"*.fgd",
-		"*.svn*"
+		"*.svn*",
+		"*.prt",
+		"*.vmf",
+		"*.vmx"
 	]
 }
