@@ -50,8 +50,10 @@
 @PointClass base(Targetname) = stb_player_color :
 "Changes the activators color"
 [
-  input SetPlayerColor(color255) : "Sets the activators render color (R G B)."
-  input SetAllPlayerColor(color255) : "Sets the render color (R G B) of ALL players."
+  Color(color1) : "Color" : "1, 0, 0" : "Color to make a player"
+  // Inputs
+  input SetPlayerColor(void) : "Sets the activators render color"
+  input SetAllPlayerColor(void) : "Sets the render color of ALL players."
 ]
 
 @PointClass base(Targetname) = stb_entity_glow :
