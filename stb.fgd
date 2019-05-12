@@ -47,6 +47,15 @@
   input PrintMessage(string) : "Prints the message in chat"
 ]
 
+@PointClass base(Targetname) = stb_flashlight :
+"Controls player flashlight use"
+[
+  input DisablePlayersFlashlight(void) : "Disables activators flashlight"
+  input DisableAllPlayerFlashlights(void) : "Disables all players flashlights"
+  input EnablePlayersFlashlight(void) : "Enables activators flashlight"
+  input EnableAllPlayerFlashlights(void) : "Enables all players flashlights"
+]
+
 @PointClass base(Targetname) = stb_player_color :
 "Changes the activators color"
 [
