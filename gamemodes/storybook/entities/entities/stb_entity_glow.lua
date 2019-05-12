@@ -16,84 +16,71 @@ end
 function ENT:KeyValue(key, value)
   if SERVER then
     if key == "Entity1" and value ~= "" then
-      self:SetEntity1(value)
+      self:SetNWString("Entity1",value)
     elseif key == "Entity2" and value ~= "" then
-      self:SetEntity2(value)
+      self:SetNWString("Entity2",value)
     elseif key == "Entity3" and value ~= "" then
-      self:SetEntity3(value)
+      self:SetNWString("Entity3",value)
     elseif key == "Entity4" and value ~= "" then
-      self:SetEntity4(value)
+      self:SetNWString("Entity4",value)
     elseif key == "glowcolor" and value ~= "" then
-      self:SetGlowColor(util.StringToType(value, "Vector"))
+      self:SetNWVector("GlowColor",util.StringToType(value, "Vector"))
     elseif key == "BlurX" and value ~= "" then
-      self:SetGlowBlurX(tonumber(value))
+      self:SetNWInt("GlowBlurX",tonumber(value))
     elseif key == "BlurY" and value ~= "" then
-      self:SetGlowBlurY(tonumber(value))
+      self:SetNWInt("GlowBlurY",tonumber(value))
     elseif key == "IgnoreZ" and value ~= "" then
       if value == 0 then
-        self:SetGlowIgnoreZ(false)
+        self:SetNWBool("GlowIgnoreZ",false)
       else
-        self:SetGlowIgnoreZ(true)
+        self:SetNWBool("GlowIgnoreZ",true)
       end
     end
-  end
-end
-
-function ENT:SetupDataTables()
-  if SERVER then
-    self:NetworkVar("String", 0,  "Entity1")
-    self:NetworkVar("String", 1,  "Entity2")
-    self:NetworkVar("String", 2,  "Entity3")
-    self:NetworkVar("String", 3,  "Entity4")
-    self:NetworkVar("Vector", 0,  "GlowColor")
-    self:NetworkVar("Int",0,"GlowBlurX")
-    self:NetworkVar("Int",1,"GlowBlurY")
-    self:NetworkVar("Bool",0,"GlowIgnoreZ")
   end
 end
 
 function ENT:SetEntEnabled(value)
   if SERVER then
     if value == true then
-      for k, v in pairs(ents.FindByName(self:GetEntity1())) do
+      for k, v in pairs(ents.FindByName(self:GetNWString("Entity1"))) do
         v:SetNWBool("halo", true)
-        v:SetNWVector("glowColor", self:GetGlowColor())
-        v:SetNWInt("blurX", self:GetGlowBlurX())
-        v:SetNWInt("blurY", self:GetGlowBlurY())
-        v:SetNWBool("ignoreZ", self:GetGlowIgnoreZ())
+        v:SetNWVector("glowColor", self:GetNWVector("GlowColor"))
+        v:SetNWInt("blurX", self:GetNWInt("GlowBlurX"))
+        v:SetNWInt("blurY", self:GetNWInt("GlowBlurY"))
+        v:SetNWBool("ignoreZ", self:GetNWBool("GlowIgnoreZ"))
       end
-      for k, v in pairs(ents.FindByName(self:GetEntity2())) do
+      for k, v in pairs(ents.FindByName(self:GetNWString("Entity2"))) do
         v:SetNWBool("halo", true)
-        v:SetNWVector("glowColor", self:GetGlowColor())
-        v:SetNWInt("blurX", self:GetGlowBlurX())
-        v:SetNWInt("blurY", self:GetGlowBlurY())
-        v:SetNWBool("ignoreZ", self:GetGlowIgnoreZ())
+        v:SetNWVector("glowColor", self:GetNWVector("GlowColor"))
+        v:SetNWInt("blurX", self:GetNWInt("GlowBlurX"))
+        v:SetNWInt("blurY", self:GetNWInt("GlowBlurY"))
+        v:SetNWBool("ignoreZ", self:GetNWBool("GlowIgnoreZ"))
       end
-      for k, v in pairs(ents.FindByName(self:GetEntity3())) do
+      for k, v in pairs(ents.FindByName(self:GetNWString("Entity3"))) do
         v:SetNWBool("halo", true)
-        v:SetNWVector("glowColor", self:GetGlowColor())
-        v:SetNWInt("blurX", self:GetGlowBlurX())
-        v:SetNWInt("blurY", self:GetGlowBlurY())
-        v:SetNWBool("ignoreZ", self:GetGlowIgnoreZ())
+        v:SetNWVector("glowColor", self:GetNWVector("GlowColor"))
+        v:SetNWInt("blurX", self:GetNWInt("GlowBlurX"))
+        v:SetNWInt("blurY", self:GetNWInt("GlowBlurY"))
+        v:SetNWBool("ignoreZ", self:GetNWBool("GlowIgnoreZ"))
       end
-      for k, v in pairs(ents.FindByName(self:GetEntity4())) do
+      for k, v in pairs(ents.FindByName(self:GetNWString("Entity4"))) do
         v:SetNWBool("halo", true)
-        v:SetNWVector("glowColor", self:GetGlowColor())
-        v:SetNWInt("blurX", self:GetGlowBlurX())
-        v:SetNWInt("blurY", self:GetGlowBlurY())
-        v:SetNWBool("ignoreZ", self:GetGlowIgnoreZ())
+        v:SetNWVector("glowColor", self:GetNWVector("GlowColor"))
+        v:SetNWInt("blurX", self:GetNWInt("GlowBlurX"))
+        v:SetNWInt("blurY", self:GetNWInt("GlowBlurY"))
+        v:SetNWBool("ignoreZ", self:GetNWBool("GlowIgnoreZ"))
       end
     else
-      for k, v in pairs(ents.FindByName(self:GetEntity1())) do
+      for k, v in pairs(ents.FindByName(self:GetNWString("Entity1"))) do
         v:SetNWBool("halo", false)
       end
-      for k, v in pairs(ents.FindByName(self:GetEntity2())) do
+      for k, v in pairs(ents.FindByName(self:GetNWString("Entity2"))) do
         v:SetNWBool("halo", false)
       end
-      for k, v in pairs(ents.FindByName(self:GetEntity3())) do
+      for k, v in pairs(ents.FindByName(self:GetNWString("Entity3"))) do
         v:SetNWBool("halo", false)
       end
-      for k, v in pairs(ents.FindByName(self:GetEntity4())) do
+      for k, v in pairs(ents.FindByName(self:GetNWString("Entity4"))) do
         v:SetNWBool("halo", false)
       end
     end
